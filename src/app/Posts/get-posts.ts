@@ -14,7 +14,7 @@ interface Post{
 })
 export class GetPosts {
 
-  private http = inject(HttpClient)
+  private http = inject(HttpClient) 
 
   getPostById(id: number): Observable<Post>{
     const data = this.http.get<Post>(`https://jsonplaceholder.typicode.com/posts/${id}`)
